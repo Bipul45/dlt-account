@@ -91,8 +91,12 @@ button{
 }
 
 .wish-text{
-  font-size:1.2rem;
-  margin:20px;
+  font-size:1.05rem;
+  margin:20px auto;
+  max-width:90%;
+  line-height:1.8;
+  text-align:centre;
+  word-wrap:break-word;
 }
 
 .wish-img{
@@ -130,3 +134,4 @@ button{
   to{background-position:0 200px;}
 
 }
+
