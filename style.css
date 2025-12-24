@@ -16,7 +16,7 @@ body{
 /* BLOOD TEXT */
 .blood-text{
   font-size:3.2rem;
-  color:#8b0000;
+  color:#white;
   text-shadow:0 0 25px red;
   position:relative;
 }
@@ -128,4 +128,5 @@ button{
 @keyframes snow{
   from{background-position:0 0;}
   to{background-position:0 200px;}
+
 }
