@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorry My Love</title>
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+
+    #letterBox {
+      display: none;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #d63384;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .final-message {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #d63384;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="letterBox">
+    <h1>I'm Sorry 💔</h1>
+    
+    <p>
+      <!-- 🌸 Yahan apna sorry letter likhna 🌸 -->
+      <!-- Example: -->
+      <!-- Meri jaan Bharti, tumse maafi maangna mere liye sabse zaruri hai... -->
+    </p>
+
+    <div class="final-message">
+      Apne pyaare Baandru ko maaf kar do 💌
+    </div>
+  </div>
+
+  <!-- 🔊 Yahan apna song URL daalna (direct .mp3 link) -->
+  <audio id="bgMusic" src="YOUR_SONG_URL_HERE.mp3" loop></audio>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        let response = confirm("Apne Baandru ko maaf kar do ❤️");
+        if (response) {
+          document.getElementById("letterBox").style.display = "block";
+          document.getElementById("bgMusic").play();
+        }
+      }, 1000);
+    };
+  </script>
+
+</body>
+</html>
+
