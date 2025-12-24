@@ -1,4 +1,4 @@
-const SECRET_CODE = "2512"; // 🔐 apna code
+const SECRET_CODE = "1234"; // 🔐 apna code
 let attempts = 0;
 
 function unlock(){
@@ -31,4 +31,5 @@ function startGifts(){
     document.body.appendChild(g);
     setTimeout(()=>g.remove(),5000);
   },160);
+
 }
