@@ -1,78 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sorry My Love</title>
-  <style>
-    body {
-      background: #ffe6f0;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 50px;
-      color: #333;
-    }
-
-    #letterBox {
-      display: none;
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 600px;
-      margin: 0 auto;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      font-size: 36px;
-      color: #d63384;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      white-space: pre-wrap;
-    }
-
-    .final-message {
-      margin-top: 30px;
-      font-size: 24px;
-      color: #d63384;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Merry Christmas 🎄</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="letterBox">
-    <h1>I'm Sorry 💔</h1>
-    
-    <p>
-      <!-- 🌸 Yahan apna sorry letter likhna 🌸 -->
-      <!-- Example: -->
-      <!-- Meri jaan Bharti, tumse maafi maangna mere liye sabse zaruri hai... -->
-    </p>
+<!-- SNOW -->
+<div class="snow"></div>
 
-    <div class="final-message">
-      Apne pyaare Baandru ko maaf kar do 💌
-    </div>
-  </div>
+<!-- LOCK SCREEN -->
+<div id="lockScreen">
+  <h1 class="blood-text">
+    Merry Christmas 🎄🎁<br>
+    <span>From Deleted Account</span>
+  </h1>
 
-  <!-- 🔊 Yahan apna song URL daalna (direct .mp3 link) -->
-  <audio id="bgMusic" src="YOUR_SONG_URL_HERE.mp3" loop></audio>
+  <input type="password" id="codeInput" placeholder="Enter Secret Code 🎁">
+  <button onclick="unlock()">Unlock</button>
+  <p id="error">Wrong Code ❌</p>
+</div>
 
-  <script>
-    window.onload = function() {
-      setTimeout(function() {
-        let response = confirm("Apne Baandru ko maaf kar do ❤️");
-        if (response) {
-          document.getElementById("letterBox").style.display = "block";
-          document.getElementById("bgMusic").play();
-        }
-      }, 1000);
-    };
-  </script>
+<!-- MAIN CONTENT -->
+<div id="content">
+  <audio id="song" loop>
+    <source src="song.mp3" type="audio/mp3">
+  </audio>
 
+  <h2 class="blink">✨ YOUR CHRISTMAS WISH HEADING ✨</h2>
+
+  <img src="img1.jpg" class="wish-img">
+
+  <p class="wish-text">
+    👉 YAHAN APNI CHRISTMAS WISH LIKHNA 👈
+  </p>
+
+  <img src="img2.jpg" class="wish-img">
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
