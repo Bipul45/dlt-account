@@ -135,3 +135,9 @@ button{
 
 }
 
+@media (max-width: 600px){
+  .wish-text{
+    font-size:1rem;
+    max-width:85%;
+  }
+}
