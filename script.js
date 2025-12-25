@@ -1,5 +1,5 @@
-const SECRET_CODE = "1234"; // 🔐 apna code
-let attempts = 0;
+const SECRET_CODE = "satyam"; // 🔐 apna code
+let attempts = 3;
 
 function unlock(){
   const input = document.getElementById("codeInput").value;
@@ -33,3 +33,4 @@ function startGifts(){
   },160);
 
 }
+
